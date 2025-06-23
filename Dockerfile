@@ -40,9 +40,9 @@ RUN cp .env.example .env && \
     echo "DB_USERNAME=laravel" >> .env && \
     echo "DB_PASSWORD=secret" >> .env
 
-# Install Node.js dependencies and build assets
+# Install Node.js dependencies and production assets
 RUN npm install && \
-    npm run build && \
+    npm run production && \
     rm -rf node_modules
 
 # Set proper permissions (fix for Vite assets issue)
